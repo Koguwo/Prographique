@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Travail Multipage (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Travail Multipage (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

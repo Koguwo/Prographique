@@ -1,0 +1,33 @@
+﻿<Window
+    x:Class="Travail_Multipage.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Travail_Multipage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <NavigationView x:Name="navView" Grid.Row="1" 
+                        PaneDisplayMode="Auto" 
+                        PaneTitle="Affichage"
+                        IsBackButtonVisible="Collapsed"
+                        SelectionChanged="navView_SelectionChanged">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItemHeader Content=""/>
+                <NavigationViewItem Content="Liste" x:Name="iListe" Icon="People"/>
+                <NavigationViewItemSeparator />
+                <NavigationViewItem Content="Ajouter" x:Name="iAjouter" Icon="Add"/>
+                <NavigationViewItemSeparator />
+                <NavigationViewItem Content="Ajout BD" x:Name="iTest" Icon="Add"/>
+                <NavigationViewItemSeparator />
+                <NavigationViewItem Content="Ajout Fichier" x:Name="iTest2" Icon="Add"/>
+            </NavigationView.MenuItems>
+
+            <Frame x:Name="mainFrame" Grid.Row="1" />
+        </NavigationView>
+
+    </Grid>
+    
+</Window>

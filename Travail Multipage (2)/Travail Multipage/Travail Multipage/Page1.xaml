@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="Travail_Multipage.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Travail_Multipage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid Background="DeepPink" HorizontalAlignment="Stretch" >
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="listeArticles" Grid.Row="0" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="5" SelectionChanged="listeEvents_SelectionChanged" Background="DeepPink">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Article">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{x:Bind UrlImage}" x:Name="test1" Height="150"/>
+                        <StackPanel>
+                            <TextBlock Foreground="Pink" Text="{x:Bind Nom, Mode=OneWay}"/>
+                            <TextBlock Foreground="Pink" Text="{x:Bind Prix, Mode=OneWay}"/>
+                            <TextBlock Foreground="Pink" Text="{x:Bind Etat, Mode=OneWay}"/>
+                        </StackPanel>
+                    </StackPanel>
+            
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView> 
+
+    </Grid>
+</Page>
